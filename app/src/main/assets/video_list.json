@@ -1,0 +1,26 @@
+[
+  {
+    "name": "HD (MP4, H264)",
+    "uri": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+  },
+  {
+    "name": "UHD (MP4, H264)",
+    "uri": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+  },
+  {
+    "name": "HD (MP4, H265)",
+    "uri": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+  },
+  {
+    "name": "UHD (MP4, H265)",
+    "uri": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+  },
+  {
+    "name": "HD (WebM, VP9)",
+    "uri": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+  },
+  {
+    "name": "UHD (WebM, VP9)",
+    "uri": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+  }
+]
