@@ -32,6 +32,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        dataBinding true
+    }
 }
 
 dependencies {
@@ -55,8 +59,14 @@ dependencies {
     kapt 'androidx.hilt:hilt-compiler:1.0.0'
     // sdp
     implementation 'com.intuit.sdp:sdp-android:1.1.0'
-    // retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     // GSON
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    // image loading
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+
+    // dependency for exoplayer
+    implementation 'com.google.android.exoplayer:exoplayer:2.14.0'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.14.0'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.14.0'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.14.0'
 }
