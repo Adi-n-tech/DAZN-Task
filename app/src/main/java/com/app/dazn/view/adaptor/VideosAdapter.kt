@@ -1,7 +1,6 @@
 package com.app.dazn.view.adaptor
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -13,9 +12,9 @@ import com.bumptech.glide.request.RequestOptions
 
 
 class VideosAdapter(
-    var list: List<VideoItem>,
-    val context: Context,
-    private val onVideoItemClick: () -> Unit
+    private var list: List<VideoItem>,
+    private val context: Context,
+    private val onVideoItemClick: (videoUrl: String) -> Unit
 ) :
     RecyclerView.Adapter<VideosAdapter.ViewHolder>() {
 
@@ -30,9 +29,7 @@ class VideosAdapter(
     // binds the list items to a view
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val videoUrl = list[position].uri
-
-        Log.d("Aditya", videoUrl)
-
+        //-----
         val requestOptions = RequestOptions()
         Glide.with(context)
             .load(videoUrl)
@@ -40,9 +37,9 @@ class VideosAdapter(
             .placeholder(R.drawable.video_thumbnail)
             .thumbnail(Glide.with(context).load(videoUrl))
             .into(holder.binding.thumbnail)
-
+        //-----
         holder.binding.thumbnail.setOnClickListener {
-            onVideoItemClick()
+            onVideoItemClick(videoUrl)
         }
     }
 

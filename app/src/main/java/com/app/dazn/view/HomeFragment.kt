@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
@@ -22,7 +23,7 @@ class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
     private lateinit var adaptor: VideosAdapter
 
-    private val videoViewModel by viewModels<VideoViewModel>()
+    private val videoViewModel: VideoViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,15 +43,15 @@ class HomeFragment : Fragment() {
             ::onVideoItemClick
         )
         binding.videosRecycle.adapter = adaptor
-
-        videoViewModel.loadVideoList(requireContext())
         //------
         videoViewModel.videoList.observe(viewLifecycleOwner, Observer {
             adaptor.updateList(it)
         })
     }
 
-    private fun onVideoItemClick() {
-        findNavController().navigate(R.id.action_homeFragment_to_playerFragment)
+    private fun onVideoItemClick(videoUrl: String) {
+        val bundle = Bundle()
+        bundle.putString("videoUrl", videoUrl)
+        findNavController().navigate(R.id.action_homeFragment_to_playerFragment, bundle)
     }
 }
