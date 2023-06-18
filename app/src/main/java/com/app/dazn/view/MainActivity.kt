@@ -18,5 +18,6 @@ class MainActivity : AppCompatActivity() {
 
         //------
         videoViewModel.loadVideoList(this)
+        videoViewModel.getAnalytics()
     }
 }

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "766975547883",
+    "project_id": "dazn-task",
+    "storage_bucket": "dazn-task.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:766975547883:android:3720de8cb01f526c3c61ae",
+        "android_client_info": {
+          "package_name": "com.app.dazn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "766975547883-304v9d6l6ofrju9je3dtht85p2p25ddn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0CT5M63P5Vm9OIOVXgiM0kJs8m_aJFgE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "766975547883-304v9d6l6ofrju9je3dtht85p2p25ddn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

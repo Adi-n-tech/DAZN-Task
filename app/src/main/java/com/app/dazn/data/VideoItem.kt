@@ -1,6 +1,6 @@
 package com.app.dazn.data
 
-class VideoItem(
+data class VideoItem(
     val uri: String,
     val name: String
 )
